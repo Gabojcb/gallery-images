@@ -1,0 +1,22 @@
+{
+  "name": "form-images",
+  "widget": {
+    "route": "/form",
+    "is": "page",
+    "sass": {
+      "path": "/widget/sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "form-images"
+    }
+  }
+}

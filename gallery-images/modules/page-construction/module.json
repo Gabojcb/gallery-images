@@ -1,0 +1,22 @@
+{
+  "name": "page-construction",
+  "widget": {
+    "route": "/construction",
+    "is": "page",
+    "sass": {
+      "path": "/widget/sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "page-construction"
+    }
+  }
+}

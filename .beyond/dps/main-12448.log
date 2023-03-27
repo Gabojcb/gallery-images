@@ -1,0 +1,49 @@
+Dynamic processors logs:
+
+"processors-registry" took 2393 ms. to process
+"ts.compiler" took 12920 ms. to process
+[31mDynamic processor "[1msass.compiler[22m: application//499599141//components//code//sass//dashboard//.///undefined" is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* sass.processor.hashes: not processed
+
+[31mDynamic processor "[1msass.processor.hashes[22m" is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* sass.processor.sources.hashes: not processed
+		* sass.dependencies.files.hash: not processed
+
+[31mDynamic processor "[1msass.dependencies.files.hash[22m" is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* sass.dependencies.files: not processed
+
+[31mDynamic processor "[1msass.dependencies.files[22m" is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* sass.dependencies: not processed
+
+[31mDynamic processor "[1msass.dependencies[22m: application//499599141//components//code//sass//dashboard//." is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* sass.analyzer: not processed
+
+[31mDynamic processor "[1msass.processor.sources.hashes[22m: application//499599141//components//code//sass//dashboard//." is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* sass.processor.sources.hashes: not processed
+
+[31mDynamic processor "[1mprocessor.sources.hash[22m" is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* utils.finder-collection: not processed
+
+[31mDynamic processor "[1mutils.finder-collection[22m" is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* utils.configurable-finder: not processed
+
+[31mDynamic processor "[1msass.processor.sources.hashes[22m: application//499599141//template.application//sass//dashboard//." is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* processor.sources.hash: not processed
+
+[31mDynamic processor "[1mutils.configurable-finder[22m" is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* utils.finder: not initialised
+
+[31mDynamic processor "[1msass.analyzer[22m: application//499599141//components//code//sass//dashboard//." is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* sass.processor.sources.hashes: not processed
+

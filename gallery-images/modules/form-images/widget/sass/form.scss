@@ -1,0 +1,193 @@
+
+//Medidas adaptadas a moviles
+@media screen and (max-width: 768px) {
+    .container__app-form {
+            background-color: #e2dede;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+    
+            .container__nav {
+                border-bottom: 2px solid;
+            }
+    
+            .container__section-form {
+                height: 300px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: #fff;
+                margin-top: 160px;
+    
+                .form {
+                    background-color: #ea5556;
+                    border-radius: 20px;
+                    height: 180px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 44%;
+                    font-size: 16px;
+                    padding: 20px;
+                    border: 2px solid black;
+    
+                    .form__h2 {
+                        font-size: 28px;
+                        margin-bottom: 0;
+                    }
+    
+                    .spaces {
+                        margin: 5px;
+                        background-color: #bb3f3f;
+                    }
+    
+                    >input {
+                        height: 35px;
+                        color: #fff;
+                        width: 95%;
+                        height: 50px;
+                        border-radius: 5px;
+                        border: none;
+                        padding: 5px 10px;
+                        box-sizing: border-box;
+    
+                        &:focus {
+                            border: none;
+                            text-decoration: none;
+                        }
+                    }
+    
+                    >button {
+                        color: #fff;
+                        font-size: 23px;
+                        height: 35px;
+                        background-color: #4CAF50;
+                        border: none;
+                        padding: 10px 20px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 16px;
+                        border-radius: 5px;
+                        width: 95%;
+    
+                        &:hover {
+                            color: black;
+                            background-color: #4FD1C5;
+                        }
+    
+                        &:active {
+                            background-color: #4fd1c470;
+                        }
+                    }
+    
+                }
+            }
+        }
+}
+
+//Medida adaptada a PC
+@media screen and (min-width: 769px) {
+
+    .main {
+        border: 2px solid;
+            height: 100%;
+            max-height: 1900px;
+            max-width: 2400px;
+            background-color:#e2dede;
+        .container__app-form {
+                background-color: #e2dede;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-height: 1900px;
+                max-width: 2400px;
+        
+                .container__nav {
+                    border-bottom: 2px solid;
+                }
+        
+                .container__section-form {
+                    height: 300px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    color: #fff;
+                    margin-top: 160px;
+        
+                    .form {
+                        background-color: #ea5556;
+                        border-radius: 20px;
+                        height: 180px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        width: 44%;
+                        font-size: 16px;
+                        padding: 20px;
+        
+                        .form__h2 {
+                            font-size: 28px;
+                            margin-bottom: 0;
+                        }
+        
+                        .spaces {
+                            margin: 5px;
+                            background-color: #bb3f3f;
+                        }
+        
+                        >input {
+                            height: 35px;
+                            color: #fff;
+                            width: 95%;
+                            height: 50px;
+                            border-radius: 5px;
+                            border: none;
+                            padding: 5px 10px;
+                            box-sizing: border-box;
+        
+                            &:focus {
+                                border: none;
+                                text-decoration: none;
+                            }
+                        }
+        
+                        >button {
+                            color: #fff;
+                            font-size: 23px;
+                            height: 35px;
+                            background-color: #4CAF50;
+                            border: none;
+                            padding: 10px 20px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;
+                            border-radius: 5px;
+                            width: 95%;
+        
+                            &:hover {
+                                color: black;
+                                background-color: #4FD1C5;
+                            }
+        
+                            &:active {
+                                background-color: #4fd1c470;
+                            }
+                        }
+        
+                    }
+                }
+            }
+    }
+}
+

@@ -1,7 +1,7 @@
 {
-  "name": "list-images",
+  "name": "gallery-images",
   "version": "0.0.1",
-  "title": "app-list-images",
+  "title": "app-gallery-images",
   "description": "",
   "template": "template/template.json",
   "layout": "main-layout",
@@ -14,6 +14,11 @@
   },
   "modules": {
     "path": "modules"
+  },
+  "static": {
+    "includes": [
+      "img"
+    ]
   },
   "deployment": {
     "distributions": [

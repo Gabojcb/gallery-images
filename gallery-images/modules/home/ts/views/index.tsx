@@ -1,10 +1,11 @@
 import * as React from "react";
+import { AppGallery } from "./app-gallery";
 
 export /*bundle*/
 function View(): JSX.Element {
-    return (
-        <div className="page__container">
-            <h1>My first page using <span className="beyond">BeyondJS</span>!</h1>
-        </div>
-    );
+  return (
+    <div className="page__container">
+      <AppGallery />
+    </div>
+  );
 }

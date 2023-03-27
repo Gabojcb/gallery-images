@@ -20,7 +20,7 @@ async function readFolders(pathFolder) {
 (async () => {
     try {
         // const content = await Promise.all(readFiles);
-        await readFolders('./list-images/images');
+        await readFolders('./gallery-images/images');
 
     } catch (error) {
         console.log(error);

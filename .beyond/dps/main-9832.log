@@ -1,0 +1,20 @@
+Dynamic processors logs:
+
+"processors-registry" took 4274 ms. to process
+[31mDynamic processor "[1mbundler.dependencies.code[22m: 4287373700//start//3020204822//." is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* bundler.transversal.dependencies: not processed
+
+[31mDynamic processor "[1mbundler.transversal.packager.code[22m: 4287373700//start//3020204822//." is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* transversal.packager.packagers.code: not initialised
+		* bundler.dependencies.code: not processed
+
+[31mDynamic processor "[1mbundler.transversal.dependencies[22m" is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* bundler.bundle.dependencies: not processed
+
+[31mDynamic processor "[1mbundler.bundle.dependencies[22m" is taking more than expected.[39m
+[1m	Waiting for:[22m
+		* bundler.processors.hashes.dependencies: not processed
+
