@@ -1,7 +1,6 @@
 //your code here\
 import { promises, readFile, stat } from "fs";
 import * as path from "path";
-import { join } from "path";
 
 export /*bundle*/ async function readFolders(pathFolder, imageFiles) {
   const stats = await promises.stat(pathFolder);
@@ -19,16 +18,3 @@ export /*bundle*/ async function readFolders(pathFolder, imageFiles) {
   }
   return imageFiles;
 }
-
-/* return (
-        <>
-        <section className="data-gallery">
-            <div>
-            {imagesFiles.map((file) => (
-                <img key={file} src={file} alt="Imagen" />
-            ))}
-            </div>
-        </section>
-        </>
-    ); 
-    */

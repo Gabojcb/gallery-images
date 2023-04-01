@@ -1,4 +1,5 @@
 import * as React from "react";
+import { DragAndDrop } from "@bgroup/ui/drag-and-drop";
 
 export /*bundle*/ function Form() {
   const handleSubtmi = (e) => {
@@ -9,16 +10,16 @@ export /*bundle*/ function Form() {
     e.preventDefault();
   };
 
+  function onUpload(files: File[]): void {
+    //your logic
+  }
+  const formats = ["png", "gif", "jpg", "jpeg"];
   return (
     <>
       <form className="form" onSubmit={handleSubtmi}>
-        <h2 className="form__h2">Unload an image</h2>
-        <input
-          type="text"
-          className="form__input-name spaces"
-          placeholder="name of file"
-        />
-        <input className="form__button-upload spaces" multiple type="file" />
+        <div className="results-form">
+          <DragAndDrop onUpload={onUpload} count={2} formats={formats} />
+        </div>
         <button onClick={handleClick} className="form__button-upload spaces">
           Upload
         </button>

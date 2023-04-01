@@ -1,26 +1,37 @@
-import * as path from "path";
+import { fileValidate } from "serve-gallery/gallery";
 import { readFolders } from "server-gallery/gallery";
+import { access, constants } from "fs";
+
 export /*bundle*/ function routes(app) {
   app.get("/gallery", async (req, res) => {
     const imageFiles = await readFolders("./images", []);
-
     const newImageFile = imageFiles.map((item) => {
-      return item.replace(/\\/g, "/");
+      const path = item.replace(
+        "E://workspace//gallery-images-project/server-gallery",
+        ""
+      );
+      return path.replace(/\\/g, "/");
     });
-
-    res.send(`${__dirname}${newImageFile}`);
+    res.send(newImageFile);
   });
 
   app.get("/images", async (req, res) => {
     const imageFiles = await readFolders("./images", []);
-    const { path } = req.params;
-    const { id } = req.query;
-    console.log(__dirname);
-    const route = ` ${__dirname}/ball-4.jpg`;
-    console.log(route);
-    /* res.send(`${path} el id de la imagen es ${id}`); */
-    res.sendFile(__dirname + " " + route);
+    const { image } = req.query;
+    const route = "E://workspace//gallery-images-project/server-gallery/";
+
+    const { path } = req.param;
+    access(image, constants.F_OK, (err) => {
+      if (err) {
+        console.error("El archivo no existe, error 404");
+        return;
+      }
+      const routeComplet = path.join(route, image);
+      res.sendFile(routeComplet);
+    });
   });
 }
 
-// expresion regular para cambiar backSlash por slash : /[\\\\](?![^{]*})/
+/*   const result = fileValidate(image); */
+/* let myUrl = "localHost:5000/images?image=images/balls/ball-1.png"; */
+/* http://localhost:5000/images?image=images/balls/ball-1.png */
