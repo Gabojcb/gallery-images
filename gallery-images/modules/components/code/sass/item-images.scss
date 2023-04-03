@@ -1,0 +1,38 @@
+
+//Medidas adaptadas a moviles
+@media screen and (max-width: 768px) {
+    .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 5px;
+    
+            .item-img {
+                border: 3px solid;
+                height: 180px;
+    
+                >img {
+                    height: 100%;
+                }
+            }
+        }
+}
+
+
+//Medidas adaptadas a pc
+@media screen and (min-width: 769px) {
+    .images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+
+        .item-img {
+            border: 3px solid;
+            height: 300px;
+            >img {
+                height: 100%;
+            }
+        }
+    }
+}

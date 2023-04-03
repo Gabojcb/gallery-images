@@ -4,7 +4,7 @@ import { AppForm } from "./app-form";
 export /*bundle*/
 function View() {
   return (
-    <div className="main">
+    <div className="page__container-form">
       <AppForm />;
     </div>
   );

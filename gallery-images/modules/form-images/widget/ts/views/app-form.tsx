@@ -4,7 +4,7 @@ import { Form } from "./form";
 
 export /*bundle*/ function AppForm() {
   return (
-    <div className="container__app-form">
+    <>
       <nav className="container__nav">
         <Navigation />
       </nav>
@@ -14,6 +14,6 @@ export /*bundle*/ function AppForm() {
       <section className="container__section">
         <Windows />
       </section>
-    </div>
+    </>
   );
 }
