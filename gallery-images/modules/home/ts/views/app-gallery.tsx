@@ -1,11 +1,5 @@
 import * as React from "react";
-import {
-  Navigation,
-  Footer,
-  ItemImages,
-  NavDespegable,
-} from "gallery-images/components";
-
+import { Navigation, Footer, ItemImages } from "gallery-images/components";
 import { useEffect } from "react";
 
 export /*bundle*/ function AppGallery() {
