@@ -1,0 +1,12 @@
+{
+  "name": "routing",
+  "description": "Routing page",
+  "start": {
+    "ts": {
+      "path": "/start/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

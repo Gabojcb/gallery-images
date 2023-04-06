@@ -1,17 +1,15 @@
 import * as React from "react";
+import { LikeAction } from "./actions/like";
 
 export function ImageModal({ imageUrl, estado, setModal }) {
-  const [count, setCount] = React.useState(0);
+  
   const [active, setActive] = React.useState(false);
-
-  const incrementCount = () => {
-    setCount(count + 1);
-  };
 
   const setColor = (e) => {
     setActive(true);
     e.currenTarget.style.background = "red";
   };
+  if(!estado) return false
 
   return (
     <>
@@ -42,12 +40,7 @@ export function ImageModal({ imageUrl, estado, setModal }) {
                 <span>keep</span>
               </div>
 
-              <div className="modal__count">
-                <button onClick={incrementCount} className="modal__button">
-                  <img src="img/icons/me-gusta.png" alt="icon me gusta" />
-                </button>
-                <span>{count}</span>
-              </div>
+              <LikeAction image={imageUrl}/>
 
               <div onClick={() => setModal(false)} className="circle">
                 <img
