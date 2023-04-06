@@ -252,6 +252,24 @@
                 font-family: 'Teko', sans-serif;
                 text-transform: uppercase;
                 color: #313133;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -8%;
+                    left: 0%;
+                    background-color: #00FFCB;
+                    height: 4px;
+                    width: 0%;
+                    transition: all 0.8s;
+                    transform: translate(1%);
+                    box-shadow: 0, 0, 17, 0 #15b495;
+                }
+
+                &:hover::after {
+                    width: 99%;
+                }
             }
 
             .nav__category {
@@ -276,10 +294,6 @@
                     padding: 1.5vw;
                     /* transition:  all .3s ease 0s; */
 
-                    &:hover {
-                        color: #796262;
-                        border-bottom: 2px solid;
-                    }
                 }
 
                 .drop-dom {

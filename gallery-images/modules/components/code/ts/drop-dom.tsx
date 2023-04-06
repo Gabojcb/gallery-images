@@ -10,7 +10,7 @@ export /* bundle */ function DropDom() {
   return (
     <>
       <ul className="cont-ul">
-        <li onClick={handleChangeNav} data-href="/home">
+        <li className="li-hover" onClick={handleChangeNav} data-href="/home">
           MENU
         </li>
         <li className="drop-dom">
