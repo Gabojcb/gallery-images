@@ -1,5 +1,5 @@
 {
-  "name": "form-images",
+  "name": "form-page",
   "widget": {
     "route": "/form",
     "is": "page",
@@ -16,7 +16,7 @@
       ]
     },
     "element": {
-      "name": "form-images"
+      "name": "app-form"
     }
   }
 }

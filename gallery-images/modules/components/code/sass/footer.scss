@@ -1,0 +1,101 @@
+
+
+//Medidas adaptadas a moviles
+@media screen and (max-width: 768px) {
+    .container-footer {
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            width: 100%;
+            position: relative;
+            bottom: 0px;
+            background-color: black;
+    
+            .links {
+                margin-top: 30px;
+                display: grid;
+                height: 340px;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: auto;
+                justify-content: space-around;
+                color: #fff;
+    
+                .link {
+                    .footer__span {
+                        font-weight: 700;
+                    }
+                }
+            }
+    
+            .footer-info {
+                display: flex;
+                flex-direction: column;
+                border-top: 1px solid #fff;
+                /* margin-top: 215px; */
+                color: #fff;
+                justify-content: space-around;
+                align-items: center;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+    
+                .icons-networks {
+    
+                    >img {
+                        height: 30px;
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+}
+//Medidas adaptadas a pc
+@media screen and (min-width: 769px) {
+    .container-footer {
+            display: flex;
+            flex-direction: column;
+            height: 270px;
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            background-color: black;
+    
+            .links {
+                display: flex;
+                margin-top: 40px;
+                height: 30%;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                color: #fff;
+    
+                .link {
+                    .footer__span {
+                        font-weight: 700;
+                    }
+                }
+            }
+    
+            .footer-info {
+                display: flex;
+                height: 70px;
+                border-top: 1px solid #fff;
+                flex-direction: row;
+                justify-content: space-around;
+                color: #fff;
+                justify-content: space-around;
+                align-items: center;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+    
+                .icons-networks {
+    
+                    >img {
+                        height: 30px;
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+}

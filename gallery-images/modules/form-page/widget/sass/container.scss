@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//Medidas adaptadas a moviles 
+@media screen and (max-width: 768px) {
+    .container__page-form {
+        display: flex;
+        position: absolute;
+        height: 100%;
+        align-items: center;
+        flex-direction: column;
+        background: var(--surface);
+        background-color: #e2dede;
+
+    }
+}   
+
+//Medidas adaptadas a pc
+@media screen and (min-width: 769px) {
+    .container__page-form {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        max-width: 2400px;
+        flex-direction: column;
+        background: var(--surface);
+        background-color: #e2dede;
+    }
+}

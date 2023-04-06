@@ -31,6 +31,3 @@ export /*bundle*/ function routes(app) {
     res.sendFile(finalPath);
   });
 }
-
-/* let myUrl = "localHost:5000/images?image=images/balls/ball-1.png"; */
-/* http://localhost:5000/images?image=images/balls/ball-1.png */

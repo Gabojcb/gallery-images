@@ -16,7 +16,7 @@ body {
 @media screen and (max-width: 768px) {
   .page__container {
     display: flex;
-    height: 100vh;
+    height: 160vh;
     min-height: 900px;
     min-width: 400px;
     max-height: 1900px;
@@ -39,13 +39,6 @@ body {
         }
   }
   
-  .container-gallery {
-    display: flex;
-    flex-direction: column;
-    width: 100px;
-    height: 100px;
-    background-color: chartreuse;
-  }
  
 }
 
@@ -53,7 +46,8 @@ body {
 @media screen and (min-width: 769px) {
   .page__container {
       display: flex;
-      height: 280vh;
+      height: 260vh;
+      position: relative;
       max-width: 2400px;
       flex-direction: column;
       background: var(--surface);

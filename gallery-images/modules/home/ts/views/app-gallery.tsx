@@ -1,5 +1,11 @@
 import * as React from "react";
-import { Navigation, Windows, ItemImages } from "gallery-images/components";
+import {
+  Navigation,
+  Footer,
+  ItemImages,
+  NavDespegable,
+} from "gallery-images/components";
+
 import { useEffect } from "react";
 
 export /*bundle*/ function AppGallery() {
@@ -33,14 +39,17 @@ export /*bundle*/ function AppGallery() {
           alt="img 2"
         />
       </section>
+
       <main className="images">
         {images.map((url) => (
           <ItemImages key={url} url={url} />
         ))}
       </main>
-      <section className="container__section">
-        <Windows />
-      </section>
+      <Footer />
     </>
   );
+}
+
+{
+  /* <section className="container__section"></section> */
 }

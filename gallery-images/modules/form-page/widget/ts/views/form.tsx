@@ -10,15 +10,13 @@ export /*bundle*/ function Form() {
     e.preventDefault();
   };
 
-  function onUpload(files: File[]): void {
-    //your logic
-  }
+  function onUpload(files: File[]): void {}
   const formats = ["png", "gif", "jpg", "jpeg"];
   return (
     <>
       <form className="form" onSubmit={handleSubtmi}>
         <div className="results-form">
-          <DragAndDrop onUpload={onUpload} count={2} formats={formats} />
+          <DragAndDrop onUpload={onUpload} count={5} formats={formats} />
         </div>
         <button onClick={handleClick} className="form__button-upload spaces">
           Upload
