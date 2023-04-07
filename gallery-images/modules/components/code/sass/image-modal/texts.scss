@@ -1,0 +1,114 @@
+.modal .modal-text {
+
+    display: flex;
+    height: 200px;
+    text-transform: uppercase;
+    /* margin-bottom: 100px; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .modal__user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        >h2 {
+            font-size: 15px;
+        }
+
+        .icon-user {
+            height: 35px;
+        }
+    }
+
+    .modal__color {
+        border: 2px solid;
+        width: 90px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        >button {
+            height: 100%;
+            border: none;
+
+            >img {
+                height: 40px;
+            }
+        }
+    }
+
+    .circle {
+        border: 2px solid;
+        height: 30px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 70%;
+        transition: all 0.3s;
+
+        >img {
+            height: 20px;
+        }
+
+        &:hover {
+            background-color: #4FD1C5;
+            box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+        }
+
+        &:active {
+            background-color: #2e9288;
+        }
+    }
+
+    .modal__count {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+        font-size: 30px;
+        border: solid 2px;
+        height: 45px;
+        width: 80px;
+
+        >button {
+            border: none;
+            height: 28px;
+            width: 28px;
+            border-radius: 100%;
+
+            >img {
+                height: 30px;
+            }
+
+            &:active {
+                background-color: red;
+            }
+        }
+    }
+
+
+    .icon-label {
+        height: 30px;
+    }
+
+    @media screen and (min-width: 769px) { 
+        .modal-user {
+            > h2 {
+                font-size: 20px;
+            }
+            .icon-user {
+                height: 55px;
+            }
+        } 
+
+        .modal__color {
+            width: 130px;
+            height: 45px;
+        }
+    }
+}
