@@ -1,0 +1,46 @@
+.container__nav .nav__div-search {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border: 2px solid;
+    border-radius: 25px;
+    background-color: #e2dede;
+    width: 180px;
+    height: 30px;
+    overflow: hidden;
+
+    .nav__input {
+        height: 20px;
+        width: 90%;
+        color: black;
+        font-size: 13px;
+        height: 50px;
+        border-radius: 25px;
+        border: none;
+        padding: 5px 25px;
+        box-sizing: border-box;
+        background-color: #e2dede;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .icon-beyond {
+        height: 50px;
+        width: 20px;
+    }
+
+    //Medidas adaptadas a pc
+    @media screen and (min-width: 769px) {
+        border: 2px solid;
+        height: 50px;
+        border-radius: 25px;
+        background-color: #e2dede;
+        width: 500px;
+    
+        .nav__input {
+            font-size: 20px;
+            height: 50px;
+        }
+    }
+}

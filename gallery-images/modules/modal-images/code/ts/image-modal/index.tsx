@@ -1,15 +1,14 @@
 import * as React from "react";
 import { LikeAction } from "./actions/like";
 
-export function ImageModal({ imageUrl, estado, setModal }) {
-  
+export /* bundle */ function ImageModal({ imageUrl, estado, setModal }) {
   const [active, setActive] = React.useState(false);
 
   const setColor = (e) => {
     setActive(true);
     e.currenTarget.style.background = "red";
   };
-  if(!estado) return false
+  if (!estado) return false;
 
   return (
     <>
@@ -28,7 +27,7 @@ export function ImageModal({ imageUrl, estado, setModal }) {
 
               <div className="modal__color">
                 <button
-                  onClick={() => setActive(true)}
+                  onClick={setColor}
                   className={`heart-button ${active ? "active" : ""}`}
                 >
                   <img
@@ -40,7 +39,7 @@ export function ImageModal({ imageUrl, estado, setModal }) {
                 <span>keep</span>
               </div>
 
-              <LikeAction image={imageUrl}/>
+              <LikeAction image={imageUrl} />
 
               <div onClick={() => setModal(false)} className="circle">
                 <img

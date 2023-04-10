@@ -18,8 +18,8 @@ export /* bundle */ function DropDom() {
           <ul className="ul-second">
             <li className="item">bicycles</li>
             <li className="item">balls</li>
-            <li>icons</li>
-            <li>cars</li>
+            <li className="item">icons</li>
+            <li className="item">cars</li>
           </ul>
         </li>
         <BeyondIconButton className="icon-beyond" icon="arrowDropDown" />

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ImageModal } from "./image-modal";
+import { ImageModal } from "gallery-images/modal-images";
 
 export /* bundle */ function ItemImages({ url }) {
   const [showModal, setShowModal] = React.useState(false);
