@@ -1,6 +1,22 @@
 import { readFolders } from "server-gallery/gallery";
 import { access, constants, promises as fs } from "fs";
 import { join } from "path";
+import * as multer from "multer";
+
+/* const upload = Multer({
+  dest: "server-gallery/images",
+}); */
+
+// SET STORAGE
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "uploads");
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + "-" + Date.now());
+  },
+});
+const upload = multer({ storage: storage });
 
 async function chekFileExists(filePath) {
   try {
@@ -29,5 +45,9 @@ export /*bundle*/ function routes(app) {
       return;
     }
     res.sendFile(finalPath);
+  });
+
+  app.post("/file", upload.single("avatar"), async (req, res) => {
+    res.send("todo bien");
   });
 }
