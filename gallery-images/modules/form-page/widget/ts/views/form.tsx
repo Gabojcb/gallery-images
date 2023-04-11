@@ -2,6 +2,8 @@ import * as React from "react";
 import { DragAndDrop } from "@bgroup/ui/drag-and-drop";
 
 export /*bundle*/ function Form() {
+  const [showFile, setShowFile] = React.useState(null);
+
   const handleSubtmi = (e) => {
     e.preventDefault();
   };
@@ -10,17 +12,43 @@ export /*bundle*/ function Form() {
     e.preventDefault();
   };
 
-  function onUpload(files: File[]): void {}
+  function onUpload(e) {
+    const file = e.target.files[0];
+    console.log(file);
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+
+    fileReader.onload = () => {
+      setShowFile(fileReader.result);
+      console.log(fileReader.result);
+    };
+
+    fileReader.onerror = () => {
+      console.log(fileReader.error);
+    };
+  }
   const formats = ["png", "gif", "jpg", "jpeg"];
   return (
     <>
-      <form className="form" onSubmit={handleSubtmi}>
+      <form
+        action="/file"
+        encType="multipart/form-data"
+        className="form"
+        method="post"
+      >
         <div className="results-form">
-          <DragAndDrop onUpload={onUpload} count={5} formats={formats} />
+          <input
+            onChange={onUpload}
+            type="file"
+            name="avatar"
+            className="result-file"
+          />
         </div>
-        <button onClick={handleClick} className="form__button-upload spaces">
-          Upload
-        </button>
+        <input
+          type="submit"
+          className="form__button-upload spaces"
+          value="send"
+        />
       </form>
     </>
   );
