@@ -1,25 +1,32 @@
 import * as React from "react";
-import { DragAndDrop } from "@bgroup/ui/drag-and-drop";
 
 export /*bundle*/ function Form() {
-  const [showFile, setShowFile] = React.useState(null);
+  const [files, setFiles] = React.useState(null);
 
-  const handleSubtmi = (e) => {
-    e.preventDefault();
-  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append("file", files);
 
-  const handleClick = (e) => {
-    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:5000/file", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   function onUpload(e) {
     const file = e.target.files[0];
-    console.log(file);
     const fileReader = new FileReader();
     fileReader.readAsDataURL(file);
 
     fileReader.onload = () => {
-      setShowFile(fileReader.result);
+      setFiles(file);
       console.log(fileReader.result);
     };
 
@@ -31,6 +38,7 @@ export /*bundle*/ function Form() {
   return (
     <>
       <form
+        onSubmit={handleSubmit}
         action="/file"
         encType="multipart/form-data"
         className="form"

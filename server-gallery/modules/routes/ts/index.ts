@@ -1,22 +1,13 @@
 import { readFolders } from "server-gallery/gallery";
-import { access, constants, promises as fs } from "fs";
+import { access, constants, rename, promises as fs } from "fs";
 import { join } from "path";
-import * as multer from "multer";
+import { Formidable } from "formidable";
 
-/* const upload = Multer({
-  dest: "server-gallery/images",
-}); */
-
-// SET STORAGE
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "uploads");
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + "-" + Date.now());
-  },
+const path = join(__dirname, "images/");
+const form = new Formidable({
+  multiples: true,
+  uploadDir: path,
 });
-const upload = multer({ storage: storage });
 
 async function chekFileExists(filePath) {
   try {
@@ -47,7 +38,16 @@ export /*bundle*/ function routes(app) {
     res.sendFile(finalPath);
   });
 
-  app.post("/file", upload.single("avatar"), async (req, res) => {
-    res.send("todo bien");
+  app.post("/file", async (req, res, next) => {
+    form.parse(req, async (err, fields, files) => {
+      const nameFile = files.file.originalFilename;
+      const subPath = join(path, nameFile);
+      await fs.rename(files.file.filepath, subPath);
+      if (err) {
+        next(err);
+        return;
+      }
+      res.json({ fields, files });
+    });
   });
 }
